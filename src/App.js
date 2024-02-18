@@ -29,18 +29,20 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg-orange-400">
     <div>
       <Navbar/>
     </div>
+    <div bg-orange-800>
     <div>
       <Filter
       filterData={filterData}
       category={category}
       setCategory={setCategory}/>
     </div>
+    </div>
 
-    <div>
+    <div className="flex flex-wrap justify-center max-w-[1200px] mx-auto min-h-[50vh] items-center">
       {
         loading?(<Spinner/>) : (<Cards courses={courses} category={category}></Cards>) 
       }

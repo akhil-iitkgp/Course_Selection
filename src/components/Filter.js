@@ -6,7 +6,7 @@ const Filter=(props)=>{
         setCategory(title);
     }
     return(
-        <div>
+        <div className="flex flex-wrap justify-center w-11/12 max-w-max space-x-4 gap-y-4 mx-auto py-4 w-11/12">
             {filterData.map((data)=>(
                 <button 
                 className={`text-lg px-2 py-1 rounded-md font-medium 

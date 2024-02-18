@@ -10,7 +10,7 @@ const Card =(props)=>{
     function clickHandler(){
         if(likedCourses.includes(course.id)) {
             //pehle se like hua pada tha
-            setLikedCourses( (prev) => prev.filter((cid)=> (cid !== course.id) )  );// prev is previous state ki id hai 
+            setLikedCourses( (prev) => prev.filter((cid)=> (cid !== course.id) )  ); // prev is previous state ki id hai 
             toast.warning("like removed");
         }
         else {
@@ -29,9 +29,10 @@ const Card =(props)=>{
 
     return (
         <div className='w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden'>
-            <div>
+            <div className='relative'>
             <img src={course.image.url} alt='kkk'/>
-            <div>
+            <div className='w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-10px]
+            grid place-items-center'>
                 <button onClick={clickHandler}>
                     {
                         likedCourses.includes(course.id) ? 
